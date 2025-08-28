@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+/* Reset & Base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header-container {
+    background: linear-gradient(to right, rgb(64, 10, 74), rgb(33, 147, 176));
+    color: white;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.header-container i.fa-books {
+    margin-right: 10px;
+}
+
+/* Menu (Sidebar Icon) */
+.menu-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.menu-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 12px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+/* Sticky Title */
+h1 {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(to right, rgb(64, 10, 74), rgb(33, 147, 176));
+    color: white;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 999;
+}
+
+/* Section Headings */
+h2 {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 6px;
+}

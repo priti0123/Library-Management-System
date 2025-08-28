@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="Header.js"></script>
+    
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            background-image: url("LibraryImage2.jpg");
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(to right, rgb(130 ,  30  ,30), rgb(130, 30, 30));
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 36px;
+            margin: 0;
+            z-index: 10;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        form {
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+            outline: none;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            margin-top: 20px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 48%;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        input[type="reset"] {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #c82333;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+       .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-link a {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-link a:hover {
+            background-color: #0056b3;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1><i class="fas fa-book"></i> Library Management System</h1>
+
+    <form action="reg" method="POST" onsubmit="return validateForm()">
+        <h2><i class="fas fa-user-plus"></i> Register</h2>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        
+        <label for="uname">Username:</label>
+        <input type="text" id="uname" name="uname" required>
+      
+
+        <label for="role">Role:</label>
+        <input type="role" id="role" name="role" required>
+        
+        <label for="pword">Password:</label>
+        <input type="password" id="pword" name="pword" onkeyup="verifyPassword()" required>
+        <div id="password-error" class="error"></div>
+
+        
+        <div class="button-group">
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+        </div>
+        
+       <div class="back-link">
+        <p><a href="UserLogin.jsp"> Back to Login Page </a></p>
+    </div>
+    </form>
+    
+   
+
+    
+</body>
+</html>
